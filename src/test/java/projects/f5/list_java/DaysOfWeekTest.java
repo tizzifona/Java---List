@@ -61,4 +61,11 @@ public class DaysOfWeekTest {
                 "Thursday", "Tuesday", "Wednesday")));
     }
 
+    @Test
+    void testClearList() {
+        daysOfWeek.clearList();
+        assertThat(daysOfWeek.getListSize(), is(0));
+        assertThat(daysOfWeek.getDays().isEmpty(), is(true));
+    }
+
 }

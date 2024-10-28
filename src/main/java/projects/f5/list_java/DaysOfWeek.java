@@ -49,4 +49,8 @@ public class DaysOfWeek {
         Collections.sort(days);
     }
 
+    public void clearList() {
+        days.clear();
+    }
+
 }
