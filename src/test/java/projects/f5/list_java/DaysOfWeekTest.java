@@ -28,4 +28,12 @@ public class DaysOfWeekTest {
         assertThat(daysOfWeek.getListSize(), is(7));
     }
 
+    @Test
+    void testRemoveDay() {
+        assertThat(daysOfWeek.getDays().contains("Monday"), is(true));
+        daysOfWeek.removeDay("Monday");
+        assertThat(daysOfWeek.getDays().contains("Monday"), is(false));
+        assertThat(daysOfWeek.getListSize(), is(6));
+    }
+
 }

@@ -29,4 +29,8 @@ public class DaysOfWeek {
         return days.size();
     }
 
+    public void removeDay(String day) {
+        days.remove(day);
+    }
+
 }
