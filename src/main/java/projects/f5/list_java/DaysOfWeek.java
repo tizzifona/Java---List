@@ -21,4 +21,8 @@ public class DaysOfWeek {
         days.add("Sunday");
     }
 
+    public List<String> getDays() {
+        return new ArrayList<>(days);
+    }
+
 }
