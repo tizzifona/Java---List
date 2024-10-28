@@ -33,4 +33,11 @@ public class DaysOfWeek {
         days.remove(day);
     }
 
+    public String getDay(int index) {
+        if (index >= 0 && index < days.size()) {
+            return days.get(index);
+        }
+        return null;
+    }
+
 }

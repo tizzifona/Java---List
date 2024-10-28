@@ -3,6 +3,7 @@ package projects.f5.list_java;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
 
 import org.junit.jupiter.api.Test;
 
@@ -34,6 +35,14 @@ public class DaysOfWeekTest {
         daysOfWeek.removeDay("Monday");
         assertThat(daysOfWeek.getDays().contains("Monday"), is(false));
         assertThat(daysOfWeek.getListSize(), is(6));
+    }
+
+    @Test
+    void testGetDay() {
+        assertThat(daysOfWeek.getDay(0), is("Monday"));
+        assertThat(daysOfWeek.getDay(2), is("Wednesday"));
+        assertThat(daysOfWeek.getDay(6), is("Sunday"));
+        assertThat(daysOfWeek.getDay(7), is(nullValue()));
     }
 
 }
