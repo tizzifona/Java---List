@@ -25,4 +25,8 @@ public class DaysOfWeek {
         return new ArrayList<>(days);
     }
 
+    public int getListSize() {
+        return days.size();
+    }
+
 }

@@ -23,4 +23,9 @@ public class DaysOfWeekTest {
                 "Friday", "Saturday", "Sunday"));
     }
 
+    @Test
+    void testGetListSize() {
+        assertThat(daysOfWeek.getListSize(), is(7));
+    }
+
 }
