@@ -1,6 +1,7 @@
 package projects.f5.list_java;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class DaysOfWeek {
@@ -42,6 +43,10 @@ public class DaysOfWeek {
 
     public boolean containsDay(String day) {
         return days.contains(day);
+    }
+
+    public void sortDaysAlphabetically() {
+        Collections.sort(days);
     }
 
 }

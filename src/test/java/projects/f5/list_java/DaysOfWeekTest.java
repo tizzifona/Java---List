@@ -5,6 +5,8 @@ import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class DaysOfWeekTest {
@@ -49,6 +51,14 @@ public class DaysOfWeekTest {
     void testContainsDay() {
         assertThat(daysOfWeek.containsDay("Monday"), is(true));
         assertThat(daysOfWeek.containsDay("BirthDay"), is(false));
+    }
+
+    @Test
+    void testSortDaysAlphabetically() {
+        daysOfWeek.sortDaysAlphabetically();
+        assertThat(daysOfWeek.getDays(), is(List.of(
+                "Friday", "Monday", "Saturday", "Sunday",
+                "Thursday", "Tuesday", "Wednesday")));
     }
 
 }
