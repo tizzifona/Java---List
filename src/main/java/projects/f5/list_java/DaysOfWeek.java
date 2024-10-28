@@ -40,4 +40,8 @@ public class DaysOfWeek {
         return null;
     }
 
+    public boolean containsDay(String day) {
+        return days.contains(day);
+    }
+
 }

@@ -45,4 +45,10 @@ public class DaysOfWeekTest {
         assertThat(daysOfWeek.getDay(7), is(nullValue()));
     }
 
+    @Test
+    void testContainsDay() {
+        assertThat(daysOfWeek.containsDay("Monday"), is(true));
+        assertThat(daysOfWeek.containsDay("BirthDay"), is(false));
+    }
+
 }
